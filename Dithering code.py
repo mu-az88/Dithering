@@ -76,7 +76,7 @@ def display_images(original, random_dithered, error_dithered, uniform_dithered):
     plt.show()
 
 if __name__ == "__main__":
-    image_path = "D:/College Syllabus/Semester 9/Multimedia/jeanie-de-klerk-bhonzdJMVjY-unsplash.jpg"
+    image_path = "D:\Scholarships\AIMS\My documents\Dithering\images\Kitten.jpg"
 
     original_image = load_image(image_path)
 
