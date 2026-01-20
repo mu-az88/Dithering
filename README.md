@@ -1,6 +1,6 @@
-**Dithering assignment**
+**Dithering Assignment**
 
-In this assignment I coded three dithering techniques:
+In this assignment I coded three Dithering techniques (used python):
   1. Random Dithering
   2. Error Diffusion Dithering
   3. Uniform Dithering (Bayer Matrix) 
