@@ -6,13 +6,13 @@ def load_image(image_path):
     image = Image.open(image_path).convert("L")   
     return np.array(image)
 
-
+    # Random Dithering
 def random_dithering(image):
     noise = np.random.randint(-128, 128, image.shape)
     noisy_image = np.clip(image + noise, 0, 255)
     return noisy_image.astype(np.uint8)
 
-
+    # Error Diffusion Dithering (Floyd-Steinberg)
 def error_diffusion_dithering(image):
     height, width = image.shape
     processed_image = image.astype(float)
@@ -38,7 +38,7 @@ def error_diffusion_dithering(image):
     return np.clip(processed_image, 0, 255).astype(np.uint8)
 
 
-
+    # Uniform Dithering using Bayer Matrix
 def uniform_dithering(image):
     bayer_matrix = np.array([
         [0,   128],
@@ -76,6 +76,8 @@ def display_images(original, random_dithered, error_dithered, uniform_dithered):
     plt.show()
 
 if __name__ == "__main__":
+
+    # EDIT: Put your image file path here!
     image_path = "\images\Kitten.jpg"
 
     original_image = load_image(image_path)
